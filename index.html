@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Guess my Number</title>
+</head>
+<body class="bg-red-600">
+    <!-- nav -->
+     <nav class="container mx-auto px-4 md:px-12 py-6 flex justify-between items-center">
+        <button class="bg-white w-30 h-13 text-xl cursor-pointer rounded">Again!</button>
+        <h4 class="text-white text-xl md:text-2xl"> (Between 1 and 6) </h4>
+     </nav>
+     <!-- header -->
+      <header class="container mx-auto py-10">
+        <h1 class="text-white text-4xl md:text-6xl text-center">Guess My Number !</h1>
+        <div class="bg-white w-40  mx-auto my-10 rounded">
+            <h3 class="number text-center font-black text-7xl py-3 ">?</h3>
+        </div>
+      </header>
+      <!-- main -->
+       <main class="container mx-auto my-6 flex-col-reverse md:flex-row gap-5 flex justify-around items-center">
+        <form>
+            <input type="number" class="guess border border-2 outline-none w-80 md:w-40 pl-5 h-15 border-white">
+            <div class="mt-6">
+                <button class="btn-checker bg-white w-80 md:w-24 h-13 text-xl cursor-pointer rounded">Check!</button>
+            </div>
+        </form>
+        <div class="text-white text-center py-6">
+            <h3 class="message text-2xl">Start guessing...</h3>
+            <h2 class="text-4xl pt-6">💯 Trials: <span class="score">6</span></h2>
+        </div>
+       </main>
+
+       <script src="App.js"></script>
+</body>
+</html>
