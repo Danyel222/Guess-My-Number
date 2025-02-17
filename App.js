@@ -9,9 +9,10 @@ let body = document.body.style;
 let againBtn = document.querySelector(".btn-again");
 
 let score = 5;
+let randomNumGen;
 
 function resetGame() {
-  score = 5;
+  score = 6;
   inpOfGuess.value = "";
   number.textContent = "?";
   message.textContent = "Start guessing...";
@@ -20,12 +21,12 @@ function resetGame() {
   checkBtn.removeAttribute("disabled");
   checkBtn.style.backgroundColor = "";
   checkBtn.style.cursor = "pointer";
+  randomNumGen = Math.ceil(Math.random() * 6); // Reset random number here
 }
 
 function gamer(e) {
   e.preventDefault();
 
-  let randomNumGen = Math.ceil(Math.random() * 6);
   let userGuess = Number(inpOfGuess.value);
 
   if (!userGuess) {
